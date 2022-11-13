@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: black;
+  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.container .heading {
+  margin-top: -2rem;
+  padding-bottom: 2rem;
+  width: fit-content;
+  text-align: center;
+}
+.container .heading h1 {
+  font-size: 3rem;
+  font-weight: 550;
+}
+.container .heading h2 {
+  font-size: 1rem;
+  color: rgb(90, 88, 88);
+}
+.container .sub_container1 {
+  box-shadow: 0 0 20px rgb(172, 170, 170);
+  width: 40rem;
+  height: 25rem;
+  padding: 1.5rem;
+}
+.container .sub_container2 {
+  background-color: rgba(190, 190, 190, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: 1px dashed black;
+  justify-content: center;
+  align-items: center;
+}
+.container .sub_container2 .upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+ 
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(237, 75, 26);
+  box-shadow: 0 5px 10px rgb(237, 135, 57);
+}
+
+.container .sub_container2 #loading {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: auto;
+  position: absolute;
+}
+
+.container .sub_container2 .upload label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: block;
+}
+.container .sub_container2 .upload svg
+{
+  height: 15px;
+  width: auto;
+  padding-right: 8px;
+  margin-bottom: -2px;
+}
+
+
+@media screen and (max-width:700px) {
+  .container .sub_container1 {
+    height: 20rem;
+    width: 18rem;
+    margin-top: 3.5rem;
+    margin-bottom: -8rem;
+
+  }
+  .container .heading h1 {
+    margin-top: -6rem;
+    font-size: 2rem;
+    padding-bottom:1rem ;
+    
+  }
+}
