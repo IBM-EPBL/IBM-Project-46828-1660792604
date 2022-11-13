@@ -1,0 +1,46 @@
+<html>
+    <head>
+        
+        <title>Handwritten Digit Recognizer</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body background="https://thumbs.dreamstime.com/b/optical-character-recognition-ocr-technology-to-check-car-speed-license-plate-number-street-vector-236596131.jpg">
+        <div class="container">
+            <div class="heading">
+                <h1>Handwritten Digit Recognizer</h1>
+                <h2>A Web Application to Detect The Handwritten Text</h2>
+            </div>
+            <div class="sub_container1">
+                <div class="sub_container2">
+                    <form class="upload" action="/confirm" method="get" enctype="multipart/form-data">
+                        
+                        <label id="label" for="upload-image"><i data-feather="file-plus"></i>Select File<br><br></label>
+                        
+                        <input type="file" name="photo" id="upload-image" hidden>
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+
+        <script rel="text/javascript">
+            feather.replace();
+
+            form = document.querySelector(".upload")
+            label = document.querySelector('#label');
+            loading = document.querySelector("#loading")
+            select = document.querySelector("#upload-image");
+
+            console.log("working...")
+            select.addEventListener('change', (e) => {
+                e.preventDefault();
+
+                form.style.visibility = "hidden";
+                form.submit()
+                loading.style.display = 'flex';
+            })
+        </script>
+    </body>
+</html>
